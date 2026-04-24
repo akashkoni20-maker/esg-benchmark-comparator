@@ -1,0 +1,1 @@
+export default function Home(){return <div>ESG Benchmark Comparator - Day 2 Setup</div>}
