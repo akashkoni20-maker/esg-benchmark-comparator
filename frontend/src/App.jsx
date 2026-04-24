@@ -1,7 +1,7 @@
-import Home from "./pages/Home";
+import AuditLogList from "./pages/AuditLogList";
 
 function App() {
-  return <Home />;
+  return <AuditLogList />;
 }
 
 export default App;
