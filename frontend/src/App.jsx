@@ -1,7 +1,4 @@
-import AuditLogForm from "./pages/AuditLogForm";
-
 function App() {
-  return <AuditLogForm />;
+  return <h1>Frontend Working Again ✅</h1>;
 }
-
 export default App;
