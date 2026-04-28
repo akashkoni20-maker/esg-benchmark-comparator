@@ -1,1 +1,9 @@
-export default function Home(){return <div>ESG Benchmark Comparator - Day 2 Setup</div>}
+function Home() {
+  return (
+    <div className="p-6 text-2xl font-bold">
+      ESG Benchmark Comparator
+    </div>
+  );
+}
+
+export default Home;

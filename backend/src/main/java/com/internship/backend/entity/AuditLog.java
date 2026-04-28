@@ -18,42 +18,22 @@ public class AuditLog {
     @Column(name = "created_at")
     private LocalDateTime createdAt;
 
-    public AuditLog() {
-    }
+    private boolean deleted = false;
 
-    public Long getId() {
-        return id;
-    }
+    public Long getId() { return id; }
 
-    public String getAction() {
-        return action;
-    }
+    public String getAction() { return action; }
+    public void setAction(String action) { this.action = action; }
 
-    public void setAction(String action) {
-        this.action = action;
-    }
+    public String getUsername() { return username; }
+    public void setUsername(String username) { this.username = username; }
 
-    public String getUsername() {
-        return username;
-    }
+    public String getDescription() { return description; }
+    public void setDescription(String description) { this.description = description; }
 
-    public void setUsername(String username) {
-        this.username = username;
-    }
+    public LocalDateTime getCreatedAt() { return createdAt; }
+    public void setCreatedAt(LocalDateTime createdAt) { this.createdAt = createdAt; }
 
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public LocalDateTime getCreatedAt() {
-        return createdAt;
-    }
-
-    public void setCreatedAt(LocalDateTime createdAt) {
-        this.createdAt = createdAt;
-    }
+    public boolean isDeleted() { return deleted; }
+    public void setDeleted(boolean deleted) { this.deleted = deleted; }
 }

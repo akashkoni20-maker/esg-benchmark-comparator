@@ -1,7 +1,7 @@
-import AuditLogList from "./pages/AuditLogList";
+import AuditLogForm from "./pages/AuditLogForm";
 
 function App() {
-  return <AuditLogList />;
+  return <AuditLogForm />;
 }
 
 export default App;
