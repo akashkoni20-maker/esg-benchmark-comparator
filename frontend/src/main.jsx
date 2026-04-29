@@ -1,15 +1,10 @@
-import { Routes, Route } from "react-router-dom";
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+import "./index.css";
 
-function Login() {
-  return <h2>Login Page</h2>;
-}
-
-function App() {
-  return (
-    <Routes>
-      <Route path="/" element={<Login />} />
-    </Routes>
-  );
-}
-
-export default App;
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
