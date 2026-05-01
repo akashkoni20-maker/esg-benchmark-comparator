@@ -93,4 +93,9 @@ public class ESGController {
 
         return ResponseEntity.ok("File uploaded successfully: " + filename);
     }
+    @Operation(summary = "Get analytics data")
+@GetMapping("/analytics")
+public List<ESGDocument> getAnalytics() {
+    return repository.findAll();
+}
 }
