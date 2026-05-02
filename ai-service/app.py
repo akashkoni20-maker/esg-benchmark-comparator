@@ -2,6 +2,8 @@ from flask import Flask
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
 
+from routes.ai_routes import ai_bp
+
 app = Flask(__name__)
 
 # Configure rate limiter
@@ -12,12 +14,17 @@ limiter = Limiter(
 
 limiter.init_app(app)
 
+# Register AI routes
+app.register_blueprint(ai_bp, url_prefix="/ai")
+
+
 @app.route("/health")
 def health():
     return {
         "status": "healthy",
         "message": "AI Service Running"
     }
+
 
 if __name__ == "__main__":
     app.run(debug=True, port=5000)
