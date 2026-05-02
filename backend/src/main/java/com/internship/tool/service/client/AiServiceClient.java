@@ -1,22 +1,29 @@
 package com.internship.backend.service.client;
 
-import java.util.HashMap;
-import java.util.Map;
-
-import org.springframework.http.HttpEntity;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
+import org.springframework.boot.web.client.RestTemplateBuilder;
+import org.springframework.http.*;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
+
+import java.time.Duration;
+import java.util.HashMap;
+import java.util.Map;
 
 @Service
 public class AiServiceClient {
 
-    private final RestTemplate restTemplate = new RestTemplate();
+    private final RestTemplate restTemplate;
 
     private static final String AI_SERVICE_URL =
             "http://localhost:5000/ai/generate";
+
+    public AiServiceClient(RestTemplateBuilder builder) {
+
+        this.restTemplate = builder
+                .setConnectTimeout(Duration.ofSeconds(10))
+                .setReadTimeout(Duration.ofSeconds(10))
+                .build();
+    }
 
     public String generateResponse(String prompt) {
 
