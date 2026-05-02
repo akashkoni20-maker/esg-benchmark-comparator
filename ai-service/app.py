@@ -1,6 +1,7 @@
 from flask import Flask
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
+from routes.describe_routes import describe_bp
 
 from routes.ai_routes import ai_bp
 
@@ -16,6 +17,7 @@ limiter.init_app(app)
 
 # Register AI routes
 app.register_blueprint(ai_bp, url_prefix="/ai")
+app.register_blueprint(describe_bp, url_prefix="/ai")
 
 
 @app.route("/health")

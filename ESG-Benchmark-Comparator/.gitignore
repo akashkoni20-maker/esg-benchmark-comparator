@@ -1,9 +1,0 @@
-.env
-node_modules/
-target/
-__pycache__/
-*.pyc
-venv/
-.idea/
-.vscode/
-chroma_data/
