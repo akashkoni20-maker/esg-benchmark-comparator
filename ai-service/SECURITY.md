@@ -103,3 +103,19 @@ Behavior: Middleware detected prompt injection attempt and blocked request.
 
 All Week 1 security tests completed successfully.
 Security middleware and validation mechanisms are functioning correctly.
+---
+
+# Day 6 — Prompt Tuning
+
+Tested 10 real ESG inputs.
+
+Observation:
+- Responses were relevant to ESG context
+- Outputs were accurate and meaningful
+- No major inconsistencies observed
+
+Conclusion:
+Prompt performance is satisfactory (≥7/10).
+No major tuning required.
+# Day 6 — Prompt Tuning
+Tested 10 ESG inputs. Outputs were relevant and accurate. No major tuning required.
