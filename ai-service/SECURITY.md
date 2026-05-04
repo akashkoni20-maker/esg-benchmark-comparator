@@ -139,3 +139,33 @@ These issues are non-critical and will be addressed in future hardening phase.
 
 ## Conclusion:
 No critical vulnerabilities found. Application is secure for current stage.
+---
+
+# Day 7 — OWASP ZAP Scan
+
+## Results:
+- Critical: 0
+- High: 0
+- Medium: CSP policy optimization warnings
+
+## Notes:
+CSP warnings relate to 'unsafe-inline' usage, which is acceptable for current development setup.
+These will be refined in production hardening phase.
+
+## Conclusion:
+All critical and high vulnerabilities resolved successfully.
+Application passes security scan requirements.
+---
+
+# Day 8 — Unit Testing
+
+## Coverage:
+- 8 pytest unit tests implemented
+- API endpoints tested
+- Error handling validated
+- SQL injection handled safely
+- Prompt injection rejected
+- External Groq API mocked
+
+## Result:
+All tests passed successfully (8/8).
