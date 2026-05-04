@@ -169,3 +169,38 @@ Application passes security scan requirements.
 
 ## Result:
 All tests passed successfully (8/8).
+---
+
+# Day 9 — Week 2 Security Sign-off
+
+## 1. JWT Verification
+Status: Not applicable / (Implemented if present)
+Notes: Current AI service does not expose protected user endpoints requiring JWT.
+
+## 2. Rate Limiting
+Status: Verified
+Details:
+- Implemented using Flask-Limiter
+- Limit: 30 requests per minute per IP
+
+## 3. Injection Protection
+Status: Verified
+
+### SQL Injection:
+- Inputs treated as plain text
+- No database execution
+
+### Prompt Injection:
+- Malicious prompts detected and rejected
+- Middleware validation in place
+
+## 4. PII Audit
+Status: Verified
+
+Findings:
+- No personal data (name, email, phone) used in prompts
+- Only ESG-related generic inputs processed
+
+## Conclusion
+All Week 2 security requirements verified successfully.
+System is secure for current development stage.
