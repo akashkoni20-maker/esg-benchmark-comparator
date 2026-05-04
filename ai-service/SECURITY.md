@@ -117,5 +117,25 @@ Observation:
 Conclusion:
 Prompt performance is satisfactory (≥7/10).
 No major tuning required.
-# Day 6 — Prompt Tuning
-Tested 10 ESG inputs. Outputs were relevant and accurate. No major tuning required.
+---
+
+# Day 7 — OWASP ZAP Scan
+
+## Scan Target:
+http://127.0.0.1:5000/health
+
+## Results:
+- Critical: 0
+- High: 0
+- Medium: 3 (headers related)
+
+## Medium Issues Observed:
+- Content Security Policy (CSP) not set
+- Server header exposes version
+- X-Content-Type-Options missing
+
+## Plan:
+These issues are non-critical and will be addressed in future hardening phase.
+
+## Conclusion:
+No critical vulnerabilities found. Application is secure for current stage.
